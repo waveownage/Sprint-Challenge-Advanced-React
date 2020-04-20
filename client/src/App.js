@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from "axios";
+import PlayerCard from "./components/PlayerCard"
 
 class App extends React.Component {
+
   constructor() {
     super();
     this.state = {
-      user: {},
-      followers: []
+      players: [],
     };
   }
 
@@ -22,7 +23,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hi!</h1>
+        <h1>REACT GITHUB USER CARD</h1>
+        <PlayerCard player={this.state.player} />
       </div>
     );
   }
