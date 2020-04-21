@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render } from '@testing-library/react';
+import { render, findAllByText } from '@testing-library/react';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -15,3 +15,7 @@ it('Womens World Cup Players show as title', () => {
   getByText(/Women's World Cup Players/i);
 });
 
+it ('Players Cards are showing', () => {
+  const { findAllByText } = render(<App />);
+  findAllByText(/name/i);
+});
