@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 import axios from "axios";
 import PlayerCard from "./components/PlayerCard";
 import styled from "styled-components";
 import NavBar from "./components/navBar";
-import "./App.css"
+import "./App.css";
 
 class App extends React.Component {
-
   constructor() {
     super();
     this.state = {
-      players: [],
+      players: []
     };
   }
 
@@ -30,7 +29,7 @@ class App extends React.Component {
         <NavBar />
         <StyledH1>Women's World Cup Players</StyledH1>
         <StyledDiv2>
-        <PlayerCard players={this.state.players} />
+          <PlayerCard players={this.state.players} />
         </StyledDiv2>
       </StyledDiv1>
     );
@@ -38,19 +37,19 @@ class App extends React.Component {
 }
 
 const StyledDiv1 = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const StyledDiv2 = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const StyledH1 = styled.h1`
-font-size: 2rem;
+  font-size: 2rem;
 `;
 
 export default App;

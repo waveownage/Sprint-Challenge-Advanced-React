@@ -2,25 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 class PlayerCard extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        players: []
-      };
-    }
-    render() {
-      return this.props.players.map(item =>(
-          <StyledDiv1>
-              <p>Name: {item.name}</p>
-              <p>Country: {item.country}</p>
-              <p>Searches: {item.searches}</p>
-              <p>ID: {item.id}</p>
-          </StyledDiv1>
-        ))
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      players: []
+    };
   }
+  render() {
+    return this.props.players.map(item => (
+      <StyledDiv1>
+        <p>Name: {item.name}</p>
+        <p>Country: {item.country}</p>
+        <p>Searches: {item.searches}</p>
+        <p>ID: {item.id}</p>
+      </StyledDiv1>
+    ));
+  }
+}
 
-  const StyledDiv1 = styled.div`
+const StyledDiv1 = styled.div`
   display: flex;
   margin: 2%;
   padding: 1%;
@@ -41,6 +41,4 @@ class PlayerCard extends React.Component {
 }
 `;
 
-export default PlayerCard
-
-
+export default PlayerCard;
